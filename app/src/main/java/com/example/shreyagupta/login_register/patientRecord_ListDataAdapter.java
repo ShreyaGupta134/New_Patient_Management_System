@@ -16,13 +16,13 @@ import java.util.List;
  * Created by Shreya Gupta on 06-01-2017.
  */
 
-public class patientRecord_ListDataAdapter extends ArrayAdapter {
+public class PatientRecord_ListDataAdapter extends ArrayAdapter {
 
 
         List list= new ArrayList();
 
 
-        public patientRecord_ListDataAdapter(Context context, int resource, List<String> strings) {
+        public PatientRecord_ListDataAdapter(Context context, int resource, List<String> strings) {
             super(context, resource);
         }
 
