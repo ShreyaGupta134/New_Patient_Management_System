@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#e57373"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,22 +26,9 @@
                 android:ems="10"
                 android:id="@+id/patient_ID"
                 android:hint="Enter Id" />
-            <TextView
-                android:text="Date"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:id="@+id/textView5" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:inputType="date"
-                android:ems="10"
-                android:id="@+id/patient_date"
-                android:hint="Enter Date" />
 
             <TextView
-        android:text="Enter your diagnosis type"
+        android:text="Enter your Prescription"
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:id="@+id/textView9" />
@@ -49,11 +38,12 @@
         android:layout_height="120dp"
         android:inputType="textPersonName"
         android:ems="10"
+        android:maxLength="30"
         android:id="@+id/notes"
         android:hint="enter prescription" />
 
     <TextView
-        android:text="Enter your diagnosis details"
+        android:text="Enter your Diagnosis details"
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:id="@+id/textView10" />
@@ -63,11 +53,12 @@
         android:layout_height="120dp"
         android:inputType="textPersonName"
         android:ems="10"
+        android:maxLength="30"
         android:id="@+id/Diagnosis_history"
         android:hint="enter Diagnosis" />
 
     <TextView
-        android:text="Enter prescription details"
+        android:text="ENter Notes"
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:id="@+id/textView11" />
@@ -77,6 +68,7 @@
         android:layout_height="120dp"
         android:inputType="textPersonName"
         android:ems="10"
+        android:maxLength="30"
         android:id="@+id/pre_med"
         android:hint="Enter note...." />
 

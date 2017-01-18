@@ -74,10 +74,10 @@ public class PatientRecord_ListDataAdapter extends ArrayAdapter {
 
             PatientRecord_Dataprovider dp = (PatientRecord_Dataprovider) this.getItem(position);
             lh.id.setText(dp.getId());
-            lh.diagnosis.setText(dp.getDiagnosis());
+            lh.date.setText(dp.getDate());
             lh.note.setText(dp.getNote());
             lh.prescription.setText(dp.getPrescription());
-            lh.date.setText(dp.getDate());
+            lh.diagnosis.setText(dp.getDiagnosis());
 
 
             return row;

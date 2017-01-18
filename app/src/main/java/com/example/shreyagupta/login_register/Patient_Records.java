@@ -1,11 +1,15 @@
 package com.example.shreyagupta.login_register;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * Created by Shreya Gupta on 06-01-2017.
  */
 
-public class Contact_Records {
-    String pre_med ,type, diagnosis,date,id;
+public class Patient_Records {
+    String pre_med ,type, diagnosis,id;
 
     public String getId() {
         return id;
@@ -33,19 +37,18 @@ public class Contact_Records {
 
 
 
-      public void setDate(String date) {
-
-        this.date = date;
-    }
 
     public String getDiagnosis() {
         return diagnosis;
     }
 
+    public String getDate(){
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        Date date=new Date();
+        return simpleDateFormat.format(date);
 
-    public String getDate() {
 
-        return date;
+
     }
 
     public void setType(String type) {

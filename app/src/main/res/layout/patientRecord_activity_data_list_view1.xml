@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_data_list_view"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.shreyagupta.login_register.Patient_HistoryDataListViewActivity"
-    android:background="#A74D4D">
+    android:background="#e57373"
+    >
 
+    <Button
+        android:text="ADD HISTORY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/History_click"
+        android:layout_marginTop="25dp"
+        android:visibility="visible"
+        android:onClick="OnAddHistoryClick" />
 
     <ListView
         android:layout_width="match_parent"
@@ -18,11 +27,4 @@
         android:id="@+id/List_view1"
         />
 
-    <Button
-        android:text="ADD HISTORY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/History_click"
-        android:visibility="visible"
-        android:onClick="OnAddHistoryClick" />
-</RelativeLayout>
+</LinearLayout>

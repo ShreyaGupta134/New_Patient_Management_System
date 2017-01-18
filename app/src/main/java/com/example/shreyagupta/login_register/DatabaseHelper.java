@@ -4,24 +4,19 @@ package com.example.shreyagupta.login_register;
  * Created by Shreya Gupta on 19-12-2016.
  */
 
-        import android.app.DownloadManager;
         import  android.content.ContentValues;
         import android.content.Context;
         import android.database.Cursor;
         import android.database.sqlite.SQLiteDatabase;
         import android.database.sqlite.SQLiteOpenHelper;
         import android.os.Build;
-        import android.provider.ContactsContract;
         import android.support.annotation.RequiresApi;
         import android.util.Log;
 
-        import java.util.ArrayList;
-        import java.util.List;
 
-        import static android.R.attr.id;
+class DatabaseHelper extends SQLiteOpenHelper  {
 
-
-public class DatabaseHelper extends SQLiteOpenHelper {
+    //DataListViewActivity dtp ;
 
     public   static  final  int DATABASE_VERSION = 1;
     public   static  final  String DATABASE_NAME="contacts.db";
@@ -36,7 +31,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public   static  final  String COLUMN_pres="prescription";
     public   static  final  String COLUMN_diagnosis="diagnosis";
     public   static  final  String COLUMN_note="note";
-    public   static  final  String COLUMN_date="date";
+    public   static  final String COLUMN_date="date";
+
 
 
     SQLiteDatabase db;
@@ -45,14 +41,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String CONTACT_CREATE="create table contacts (id integer primary key not null , "
             + "name text not null , age text not null , date text not null , contact_no text not null);";
 
-    public static final String HISTORY_CREATE="create table patient_history (patient_id integer , "
-            + "prescription text not null , diagnosis text not null , note text not null , date text not null);";
+    /*public static final String HISTORY_CREATE="create table patient_history (patient_id integer , "
+            + "prescription text not null , diagnosis text not null , note text not null , date text not null);";*/
+
+    public static final String HISTORY_CREATE="create table patient_history (id integer primary key not null, patient_id integer , "
+            + "prescription text not null , diagnosis text not null , note text not null , date DateTime default Current_timestamp);";
 
 
     public DatabaseHelper(Context context){
         super(context , DATABASE_NAME , null , DATABASE_VERSION);
     }
-
 
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -93,7 +91,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void insertPatientRecord(Contact_Records c){
+    public void insertPatientRecord(Patient_Records c){
         db=this.getWritableDatabase();
         ContentValues value1=new ContentValues();
         value1.put(COLUMN_patient_history_id,c.getId());
@@ -114,31 +112,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public Cursor getPatientHistory(SQLiteDatabase db){
+    public Cursor getPatientHistory(SQLiteDatabase db,String id){
         Cursor cursor;
-        String[] projections1={COLUMN_patient_history_id,COLUMN_pres,COLUMN_diagnosis,COLUMN_date,COLUMN_note};
-        cursor=db.query(PATIENT_RECORDS,projections1,null,null,null,null,null);
+        String[] projections1={COLUMN_patient_history_id,COLUMN_pres,COLUMN_note,COLUMN_date,COLUMN_diagnosis};
+        cursor=db.query(PATIENT_RECORDS,projections1,COLUMN_patient_history_id+"=?",new String[] {id},null,null,COLUMN_date+" DESC");
         return cursor;
 
     }
+
+    public Cursor getExpandedPatientHistory(SQLiteDatabase db,String Date){
+        Cursor cursor;
+        String[] projections1={COLUMN_pres,COLUMN_date,COLUMN_note};
+        cursor=db.query(PATIENT_RECORDS,projections1,COLUMN_date+"=?",new String[] {Date},null,null,null);
+        return cursor;
+
+    }
+
+
     /*public Cursor getData(SQLiteDatabase sqLiteDatabase) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("Select * from patient_history where" + COLUMN_patient_history_id + "=" +id , null);
         return res;
     }*/
 
-    public Cursor getData(SQLiteDatabase sqLiteDatabase) {
+   /* public Cursor getData(SQLiteDatabase sqLiteDatabase) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query= "Select * from patient_history where " + COLUMN_patient_history_id + "=" +id;
+        String query= "Select * from patient_history where " + COLUMN_patient_history_id + "=" +dtp.id_contacts;
         Log.i("PATIENT_RECORDS_QUERY",query);
         Cursor res = db.rawQuery(query, null);
         return res;
 
-    }
+    }/*
 
     /*public Cursor getData(SQLiteDatabase sqLiteDatabase) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query=("Select * from patient_history where " + COLUMN_patient_history_id + "="+id,null);
+        String query=("Select * from patient_history where " + COLUMN_patient_history_id + "="+id, null);
         Log.i("PATIENT_RECORDS_QUERY",query);
         Cursor res = db.rawQuery(query, null);
         return res;

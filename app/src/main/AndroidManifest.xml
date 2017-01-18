@@ -23,6 +23,7 @@
         <activity android:name=".History"></activity>
         <activity android:name=".DataListViewActivity"></activity>
         <activity android:name=".Patient_HistoryDataListViewActivity"></activity>
+        <activity android:name=".Expanded_patientRecord_Textview" />
 
     </application>
 

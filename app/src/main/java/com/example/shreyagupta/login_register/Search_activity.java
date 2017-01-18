@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.text.ParseException;
+
 /**
  * Created by Shreya Gupta on 29-12-2016.
  */
@@ -54,6 +56,7 @@ public class Search_activity extends AppCompatActivity {
              dis_phone.setText(phone_number);
              dis_phone.setVisibility(View.VISIBLE);
              dis_age.setVisibility(View.VISIBLE);
-         }
+
     }
+}
 }

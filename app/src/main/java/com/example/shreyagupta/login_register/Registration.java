@@ -9,6 +9,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.text.ParseException;
+
 /**
  * Created by Shreya Gupta on 15-12-2016.
  */
@@ -18,6 +20,7 @@ public class Registration extends Activity {
     DatabaseHelper Helper = new DatabaseHelper(this);
     RadioGroup rg ;
     RadioButton rb ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

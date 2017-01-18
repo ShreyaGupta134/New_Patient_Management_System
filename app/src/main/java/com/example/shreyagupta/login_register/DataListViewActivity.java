@@ -15,9 +15,11 @@ import android.content.Intent;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.ParseException;
+
 public class DataListViewActivity extends AppCompatActivity {
 
-    private Session session;
+    //private Session session;
     ListView listView;
     SQLiteDatabase db;
     int i;
@@ -72,7 +74,6 @@ public class DataListViewActivity extends AppCompatActivity {
     }
 
         /*AdapterView.OnItemClickListener myListViewClicked = new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                // Object item = adapterView.getItemAtPosition(i);
@@ -89,19 +90,18 @@ public class DataListViewActivity extends AppCompatActivity {
             }
         };
         listView.setOnItemClickListener(myListViewClicked);
-
     }*/
 }
-    //SharedPreferences pref ;
-    //SharedPreferences.Editor editor ;
-    //Context ctx ;
+//SharedPreferences pref ;
+//SharedPreferences.Editor editor ;
+//Context ctx ;
 
 
 
 
 
-    //Adapter adp;
-    // ArrayList <Contact> stringArrayList;
+//Adapter adp;
+// ArrayList <Contact> stringArrayList;
 
     /*protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,34 +113,23 @@ public class DataListViewActivity extends AppCompatActivity {
         listDataAdapter = new ListDataAdapter(getApplicationContext(), R.layout.patientcontacts_row_wise, null);
         if (cursor.moveToFirst()) {
             do {
-
                 String name, age, contact_no, id;
                 id = cursor.getString(0);
                 name = cursor.getString(1);
                 age = cursor.getString(2);
                 contact_no = cursor.getString(3);
-
                 DataProvider dataProvider = new DataProvider(name, age, contact_no, id);
                 listDataAdapter.add(dataProvider);
-
             } while (cursor.moveToNext());
         }
         cursor.close();
         listView.setClickable(true);
         listView.setAdapter(listDataAdapter);
-
         //SharedPreferences pref = getSharedPreferences(name, 0){ };
-
-
-
         AdapterView.OnItemClickListener myListViewClicked = new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
                 //String id_contacts = ((TextView) view.findViewById(R.id.user_id)).getText().toString();
-
-
                // cursor = helper.get(db);
                 //Toast.makeText(getBaseContext(), id_contacts, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(DataListViewActivity.this, Patient_HistoryDataListViewActivity.class);
@@ -151,10 +140,7 @@ public class DataListViewActivity extends AppCompatActivity {
             }
         };
         listView.setOnItemClickListener(myListViewClicked);
-
     }
-
-
     /*public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
         Object item = listView.getItemAtPosition(i);
         String patient_id = item.toString();
@@ -170,9 +156,7 @@ public class DataListViewActivity extends AppCompatActivity {
         pref = ctx.getSharedPreferences("Patient_id",Context.MODE_PRIVATE);
         editor = pref.edit();
     }
-
     //Method declared for storing data
-
     public void setID (boolean ID_set) {
         editor.putBoolean("MyID",ID_set); // Here I am supposed to pass one "key_name" and the boolean arg. What will be the key name ?
         editor.commit(); // To push the changes
@@ -181,7 +165,6 @@ public class DataListViewActivity extends AppCompatActivity {
     public boolean getID (){
         return pref.getBoolean("MyID",false);
     }
-
 }*/
 
 

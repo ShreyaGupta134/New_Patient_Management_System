@@ -56,13 +56,13 @@ public class PatientRecord_Dataprovider
     public void setDate(String date) {
         this.date = date;
     }
-    public PatientRecord_Dataprovider(String id,String date, String prescription, String note, String diagnosis) {
-         this.id=id;
-        this.prescription = prescription;
-        this.note = note;
-        this.date = date;
-        this.diagnosis=diagnosis;
-    }
 
+    public PatientRecord_Dataprovider(String prescription, String date, String note,String id,String diagnosis) {
+        this.diagnosis = diagnosis;
+        this.id = id;
+        this.prescription = prescription;
+        this.date = date;
+        this.note = note;
+    }
 
 }
