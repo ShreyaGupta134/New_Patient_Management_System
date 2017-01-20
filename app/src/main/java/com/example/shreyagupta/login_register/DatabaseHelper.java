@@ -112,10 +112,12 @@ class DatabaseHelper extends SQLiteOpenHelper  {
 
     }
 
-    public Cursor getPatientHistory(SQLiteDatabase db,String id){
+    public Cursor getPatientHistory(SQLiteDatabase db){
         Cursor cursor;
         String[] projections1={COLUMN_patient_history_id,COLUMN_pres,COLUMN_note,COLUMN_date,COLUMN_diagnosis};
-        cursor=db.query(PATIENT_RECORDS,projections1,COLUMN_patient_history_id+"=?",new String[] {id},null,null,COLUMN_date+" DESC");
+       // cursor=db.query(PATIENT_RECORDS,projections1,COLUMN_patient_history_id+"=?",new String[] {id},null,null,COLUMN_date+" DESC");
+        cursor=db.query(PATIENT_RECORDS,projections1,null,null,null,null,COLUMN_date+" DESC");
+
         return cursor;
 
     }

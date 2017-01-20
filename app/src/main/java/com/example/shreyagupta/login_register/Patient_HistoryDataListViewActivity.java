@@ -1,9 +1,12 @@
 package com.example.shreyagupta.login_register;
 
+
+import android.app.Fragment;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -23,7 +26,9 @@ import static com.example.shreyagupta.login_register.R.id.History_click;
  */
 
 
-    public class Patient_HistoryDataListViewActivity extends AppCompatActivity {
+    public class Patient_HistoryDataListViewActivity extends FragmentActivity{
+
+
 
     ListView listView;
     SQLiteDatabase db;
@@ -35,6 +40,8 @@ import static com.example.shreyagupta.login_register.R.id.History_click;
 
     PatientRecord_ListDataAdapter listDataAdapter;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +49,8 @@ import static com.example.shreyagupta.login_register.R.id.History_click;
         listView = (ListView) findViewById(R.id.List_view1);
         helper = new DatabaseHelper(getApplicationContext());
         db = helper.getReadableDatabase();
-        String id_history = getIntent().getStringExtra("PATIENT_ID");
-        cursor = helper.getPatientHistory(db,id_history);
+        //String id_history = getIntent().getStringExtra("PATIENT_ID");
+        cursor = helper.getPatientHistory(db);
         //helper.getData(db);
 
         listDataAdapter = new PatientRecord_ListDataAdapter(getApplicationContext(), R.layout.patientrecord_row_wise, null);
@@ -63,7 +70,7 @@ import static com.example.shreyagupta.login_register.R.id.History_click;
         } else {
             patient_id= (String) savedInstanceState.getSerializable("PATIENT_ID");
         }
-        Log.i("Variable",patient_id);
+        //Log.i("Variable",patient_id);
 
 
 

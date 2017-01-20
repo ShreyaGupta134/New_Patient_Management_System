@@ -57,12 +57,12 @@ public class DataListViewActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                DataProvider item = (DataProvider)adapterView.getItemAtPosition(i);
-                String id = item.getId().toString();
-                Intent intent = new Intent(DataListViewActivity.this, Patient_HistoryDataListViewActivity.class);
-                intent.putExtra("PATIENT_ID", id);
+                //DataProvider item = (DataProvider)adapterView.getItemAtPosition(i);
+                //String id = item.getId().toString();
+                Intent intent = new Intent(DataListViewActivity.this, Linker.class);
+                //intent.putExtra("PATIENT_ID", id);
                 startActivity(intent);
-                Toast.makeText(getBaseContext(),id,Toast.LENGTH_LONG).show();
+                //Toast.makeText(getBaseContext(),id,Toast.LENGTH_LONG).show();
                 //String id_contacts = ((TextView) view.findViewById(R.id.user_id)).getText().toString();
                 //cursor=helper.getData(db);
                 //String item = adapterView.getItemAtPosition(i).toString();

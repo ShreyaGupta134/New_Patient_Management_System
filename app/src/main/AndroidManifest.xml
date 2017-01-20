@@ -23,7 +23,10 @@
         <activity android:name=".History"></activity>
         <activity android:name=".DataListViewActivity"></activity>
         <activity android:name=".Patient_HistoryDataListViewActivity"></activity>
-        <activity android:name=".Expanded_patientRecord_Textview" />
+        <activity android:name=".PatientRecord_tabs"></activity>
+        <activity android:name=".Linker"/>
+            <activity android:name=".Third_try"  />
+        />
 
     </application>
 
