@@ -1,6 +1,5 @@
 package com.example.shreyagupta.login_register;
 
-import android.app.Activity;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 //sir this is my todays approach class
 // U need to put that class in onitemlistener of datalistviewActivity to check how its work instead of Patienthistory
 
-public class Linker extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
+public class TabLayout_patient_Record extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
 
     //This is our tablayout
     private TabLayout tabLayout;
@@ -24,7 +23,7 @@ public class Linker extends AppCompatActivity implements TabLayout.OnTabSelected
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.tablayout_patient_record);
 
         //Adding toolbar to the activity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

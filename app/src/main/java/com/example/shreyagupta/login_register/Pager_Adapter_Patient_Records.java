@@ -29,10 +29,10 @@ public class Pager_Adapter_Patient_Records extends FragmentStatePagerAdapter {
         //Returning the current tabs
         switch (position) {
             case 0:
-                Test tab1 = new Test();
+                Patient_HistoryDataListViewActivity tab1  = new Patient_HistoryDataListViewActivity();
                 return tab1;
             case 1:
-                Test1 tab2 = new Test1();
+                Patient_HistoryDataListViewActivity tab2 = new Patient_HistoryDataListViewActivity();
                 return tab2;
 
             default:
