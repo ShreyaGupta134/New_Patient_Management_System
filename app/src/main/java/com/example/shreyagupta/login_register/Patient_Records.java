@@ -9,25 +9,17 @@ import java.util.Locale;
  */
 
 public class Patient_Records {
-    String pre_med ,type, diagnosis,id;
+    String Notes ,prescription, diagnosis;
+            int id;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getPre_med() {
-
-        return pre_med;
-
-    }
-
-    public void setPre_med(String pre_med) {
-        this.pre_med = pre_med;
-    }
 
 
     public void setDiagnosis(String diagnosis) {
@@ -51,12 +43,20 @@ public class Patient_Records {
 
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-    public String getType() {
-
-        return type;
+    public String getNotes() {
+        return Notes;
     }
 
+    public void setNotes(String notes) {
+        Notes = notes;
+    }
+
+    public String getPrescription() {
+        return prescription;
+    }
+
+    public void setPrescription(String prescription) {
+        this.prescription = prescription;
+    }
 }
+

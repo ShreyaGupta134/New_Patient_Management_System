@@ -15,7 +15,7 @@ import java.text.ParseException;
  * Created by Shreya Gupta on 05-01-2017.
  */
 
-public class History extends AppCompatActivity {
+/*public class History extends AppCompatActivity {
     DatabaseHelper helper = new DatabaseHelper (this) ; // Compilation error
 
     public History() throws ParseException {
@@ -46,12 +46,12 @@ public class History extends AppCompatActivity {
             c.setId(id);
             c.setDiagnosis(patient_pres);
             //c.setDate(patient_date);
-            c.setPre_med(history_d);
-            c.setType(patient_notes);
+            c.setNotes(patient_notes);
+            c.setPrescription(patient_pres);
 
             helper.insertPatientRecord(c);
             Toast.makeText(getBaseContext(), "one row inserted", Toast.LENGTH_LONG).show();
 
         }
     }
-}
+}*/

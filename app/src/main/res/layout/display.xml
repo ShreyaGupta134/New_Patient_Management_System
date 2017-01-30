@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@mipmap/med_background"
+    android:background="@drawable/med_background"
     >
 
     <TextView
@@ -40,7 +40,8 @@
         android:layout_marginStart="57dp"
         android:layout_marginTop="25dp"
         android:id="@+id/button_search"
-        android:onClick="search_click" />
+        android:onClick="search_click"
+        android:background="@color/aqua"/>
 
     <Button
         android:text="View Patients"
@@ -51,18 +52,21 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/button_search"
         android:layout_alignLeft="@+id/button_search"
-        android:layout_alignStart="@+id/button_search" />
+        android:layout_alignStart="@+id/button_search"
+        android:background="@color/aqua"/>
 
     <Button
         android:text="Add New Patient "
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/p_proceed"
         android:layout_weight="0.02"
         android:onClick="B_proceed"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/button_search"
-        android:layout_alignStart="@+id/button_search"></Button>
+        android:layout_alignStart="@+id/button_search"
+        android:background="@color/aqua">
+    </Button>
 
 
 </RelativeLayout>

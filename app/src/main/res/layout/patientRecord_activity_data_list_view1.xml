@@ -1,30 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_data_list_view"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.shreyagupta.login_register.Patient_HistoryDataListViewActivity"
-    android:background="#e57373"
-    >
+    android:gravity="bottom">
 
 
-    <Button
-        android:text="ADD HISTORY"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/History_click"
-        android:layout_marginTop="25dp"
-        android:visibility="visible"
-        android:onClick="OnAddHistoryClick" />
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:text="ID"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+             />
+        <TextView android:text="@+id/TextView01"
+            android:id="@+id/Text_id"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/textmodify"
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/List_view1"
-        />
+            />
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        <TextView
+            android:text="PRESCRIPTION"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+             />
+
+          <TextView
+                android:text="Prescription"
+                android:layout_width="match_parent"
+                android:background="@drawable/textmodify"
+                android:layout_height="25dp"
+                android:id="@+id/Text_presc" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        <TextView
+            android:text="DIAGNOSIS"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+          />
+            <TextView
+                android:text="Diagnosis details"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/textmodify"
+                android:id="@+id/text_diagnosis" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        <TextView
+            android:text="DATE"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+             />
+            <TextView
+                android:text="Date"
+                android:layout_width="match_parent"
+                android:background="@drawable/textmodify"
+                android:layout_height="25dp"
+                android:id="@+id/text_Date" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:text="Notes"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:id="@+id/text_Notes" />
 
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
 
-</LinearLayout>
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="Onclick"
+                android:gravity="left"
+                android:text="Next"
+                android:contentDescription="Next_Button"
+                android:visibility="visible" />
+
+            <View android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/previous_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="previous"
+                android:onClick="Onclick"
+                android:contentDescription="Previous_button"
+                android:gravity="right"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>

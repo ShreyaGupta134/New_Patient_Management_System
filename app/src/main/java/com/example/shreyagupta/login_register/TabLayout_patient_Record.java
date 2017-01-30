@@ -27,14 +27,16 @@ public class TabLayout_patient_Record extends AppCompatActivity implements TabLa
 
         //Adding toolbar to the activity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        if (toolbar != null){
+            setSupportActionBar(toolbar);}
 
         //Initializing the tablayout
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
         //Adding the tabs using addTab() method
-        tabLayout.addTab(tabLayout.newTab().setText("Current"));
-        tabLayout.addTab(tabLayout.newTab().setText("History"));
+        tabLayout.addTab(tabLayout.newTab().setText("OLD"));
+        tabLayout.addTab(tabLayout.newTab().setText("ADD"));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 

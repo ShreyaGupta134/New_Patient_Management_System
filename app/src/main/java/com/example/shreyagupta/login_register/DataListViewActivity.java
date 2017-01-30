@@ -1,5 +1,9 @@
 package com.example.shreyagupta.login_register;
 
+/**
+ * Created by User on 2017-01-23.
+ */
+
 import  android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +13,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.content.Intent;
+
+import com.example.shreyagupta.login_register.ListDataAdapter;
 
 public class DataListViewActivity extends AppCompatActivity {
 
@@ -61,6 +67,3 @@ public class DataListViewActivity extends AppCompatActivity {
 
     }
 }
-
-
-

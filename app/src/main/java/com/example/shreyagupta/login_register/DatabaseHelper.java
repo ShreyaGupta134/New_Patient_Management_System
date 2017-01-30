@@ -48,15 +48,6 @@ class DatabaseHelper extends SQLiteOpenHelper  {
     }
 
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    @Override
-    public void onOpen(SQLiteDatabase database) {
-        super.onOpen(database);
-        if (!database.isReadOnly()) {
-            database.setForeignKeyConstraintsEnabled(true);
-
-        }
-    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -91,8 +82,8 @@ class DatabaseHelper extends SQLiteOpenHelper  {
         ContentValues value1=new ContentValues();
         value1.put(COLUMN_patient_history_id,c.getId());
         value1.put(COLUMN_diagnosis,c.getDiagnosis());
-        value1.put(COLUMN_pres,c.getPre_med());
-        value1.put(COLUMN_note,c.getType());
+        value1.put(COLUMN_pres,c.getPrescription());
+        value1.put(COLUMN_note,c.getNotes());
         value1.put(COLUMN_date,c.getDate());
         db.insert(PATIENT_RECORDS,null,value1);
     }
