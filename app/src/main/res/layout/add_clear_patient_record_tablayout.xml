@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:text="ID"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/textView6" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:id="@+id/patient_ID"
+                android:hint="Enter Id"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:text="Enter your Prescription"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/textView9" />
+
+            <EditText
+                android:layout_width="397dp"
+                android:layout_height="120dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:maxLength="30"
+                android:id="@+id/notes_id"
+                android:hint="enter prescription" />
+
+            <TextView
+                android:text="Enter your Diagnosis details"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/textView10" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:maxLength="30"
+                android:id="@+id/diag_id"
+                android:hint="enter Diagnosis" />
+
+            <TextView
+                android:text="ENter Notes"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:id="@+id/textView11" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:maxLength="30"
+                android:id="@+id/pres_id"
+                android:hint="Enter note...." />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/AddBtn"
+                    android:text="ADD"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp" />
+
+                <Space
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:id="@+id/ClrBtn"
+                    android:layout_alignParentBottom="true" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
