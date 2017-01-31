@@ -1,4 +1,4 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
 /**
  * Created by Shreya Gupta on 19-12-2016.
@@ -11,7 +11,6 @@ package com.example.shreyagupta.login_register;
         import android.database.sqlite.SQLiteOpenHelper;
         import android.os.Build;
         import android.support.annotation.RequiresApi;
-        import android.util.Log;
 
 
 class DatabaseHelper extends SQLiteOpenHelper  {

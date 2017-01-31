@@ -86,6 +86,8 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_marginLeft="19dp"
+                    android:textColor="#FFFF"
+                    android:background="@color/colorPrimaryDark"
                     android:layout_marginStart="19dp" />
 
                 <Space
@@ -101,6 +103,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="14dp"
                     android:layout_marginEnd="14dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="#FFFF"
                     android:id="@+id/ClrBtn"
                     android:layout_alignParentBottom="true" />
 

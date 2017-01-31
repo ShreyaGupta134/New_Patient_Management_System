@@ -1,4 +1,4 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,8 +8,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
-import java.text.ParseException;
 
 /**
  * Created by Shreya Gupta on 15-12-2016.

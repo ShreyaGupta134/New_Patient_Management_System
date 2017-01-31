@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="40dp"
-    android:background="#ff4081">
+    android:background="@color/LemonChiffon">
     <TextView
         android:layout_marginTop="10dp"
-        android:text="Here id"
+        android:text="ID"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:id="@+id/user_id"
@@ -14,7 +14,7 @@
 
     <TextView
         android:layout_marginTop="10dp"
-        android:text="Here name"
+        android:text="NAME"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:id="@+id/user_name"
@@ -23,7 +23,7 @@
 
     <TextView
         android:layout_marginTop="10dp"
-        android:text="Here contact_no"
+        android:text="CONTACT"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -32,7 +32,7 @@
 
     <TextView
         android:layout_marginTop="10dp"
-        android:text="Here age"
+        android:text="AGE"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:id="@+id/user_age"

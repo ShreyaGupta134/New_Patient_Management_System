@@ -1,32 +1,15 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.TextView;
-import android.provider.ContactsContract;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.LoaderManager.LoaderCallbacks;
-import android.widget.AdapterView;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 
 /**
@@ -39,7 +22,7 @@ public class Display extends Activity {
     EditText ed ;
     ArrayAdapter<String> adapter ;
     SQLiteDatabase database;
-    com.example.shreyagupta.login_register.DatabaseHelper dbh;
+    com.example.elait.pms.DatabaseHelper dbh;
     Cursor csr ;
 
     @Override

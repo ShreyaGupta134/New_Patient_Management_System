@@ -1,6 +1,4 @@
-package com.example.shreyagupta.login_register;
-        import android.app.Fragment;
-        import android.content.Intent;
+package com.example.elait.pms;
         import android.database.sqlite.SQLiteDatabase;
         import android.os.Build;
         import android.os.Bundle;
@@ -11,12 +9,6 @@ package com.example.shreyagupta.login_register;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.Toast;
-
-
-        import java.text.ParseException;
-        import java.text.StringCharacterIterator;
-
-        import static android.R.attr.button;
 
 /**
  * Created by User on 2017-01-24.

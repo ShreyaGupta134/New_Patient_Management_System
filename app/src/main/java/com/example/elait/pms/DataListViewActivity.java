@@ -1,4 +1,4 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
 /**
  * Created by User on 2017-01-23.
@@ -13,8 +13,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.content.Intent;
-
-import com.example.shreyagupta.login_register.ListDataAdapter;
 
 public class DataListViewActivity extends AppCompatActivity {
 
@@ -48,8 +46,12 @@ public class DataListViewActivity extends AppCompatActivity {
                 listDataAdapter.add(dataProvider);
 
             } while (cursor.moveToNext());
+        View header = getLayoutInflater().inflate(R.layout.patient_contacts_header, null);
+
+        listView.addHeaderView(header,null,false);
         }
         cursor.close();
+
         listView.setAdapter(listDataAdapter);
         AdapterView.OnItemClickListener myListViewClicked = new AdapterView.OnItemClickListener() {
 
@@ -57,8 +59,12 @@ public class DataListViewActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 DataProvider item = (DataProvider) adapterView.getItemAtPosition(i);
                 String id = item.getId().toString();
+                String name = item.getName().toString();
+                String age = item.getAge().toString();
                 Intent intent = new Intent(DataListViewActivity.this, TabLayout_patient_Record.class);
                 intent.putExtra("PATIENT_ID", id);
+                intent.putExtra("PATIENT_NAME", name);
+                intent.putExtra("PATIENT_AGE", age);
                 startActivity(intent);
                 Log.i("Clicked Item: ", Integer.toString(i));
             }

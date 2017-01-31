@@ -1,7 +1,5 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 
@@ -29,7 +27,7 @@ public class Pager_Adapter_Patient_Records extends FragmentStatePagerAdapter {
         //Returning the current tabs
         switch (position) {
             case 0:
-                Text tab1  = new Text();
+                Tab_Layout_Old_Patient_Record tab1  = new Tab_Layout_Old_Patient_Record();
                 return tab1;
             case 1:
                 Add_Clear_Records tab2  = new Add_Clear_Records();

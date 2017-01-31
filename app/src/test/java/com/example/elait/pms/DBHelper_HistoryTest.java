@@ -1,8 +1,6 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Shreya Gupta on 06-01-2017.

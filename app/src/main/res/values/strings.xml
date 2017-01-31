@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Patient Management System</string>
+    <string name="app_name">PMS</string>
     <string name="emptyString" />
     <string name="emptyString1" />
     <string-array name="array_patient">

@@ -1,23 +1,20 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by User on 1/25/2017.
  */
 
-public class Text extends Fragment implements View.OnClickListener {
+public class Tab_Layout_Old_Patient_Record extends Fragment implements View.OnClickListener {
 
 
     TextView id_re;
@@ -106,6 +103,7 @@ public class Text extends Fragment implements View.OnClickListener {
             else{
                 Button btn = (Button) getActivity().findViewById(R.id.previous_button);
                 btn.setEnabled(false);
+
             }
         }
 

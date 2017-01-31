@@ -1,17 +1,12 @@
-package com.example.shreyagupta.login_register;
+package com.example.elait.pms;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.text.ParseException;
 
 /**
  * Created by Shreya Gupta on 29-12-2016.
@@ -35,7 +30,7 @@ public class Search_activity extends AppCompatActivity {
 
         String name_of_patient = getIntent().getStringExtra("PatientName");
 
-        //TextView tv = (TextView) findViewById(R.id.user_name);
+
         search_name = (EditText) findViewById(R.id.search_patients);
         search_name.setText(name_of_patient);
         dis_age = (TextView) findViewById (R.id.display_age);

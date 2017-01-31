@@ -19,7 +19,7 @@
             android:id="@+id/Text_id"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:background="@drawable/textmodify"
+            android:background="@drawable/color_border"
 
             />
 
@@ -35,7 +35,7 @@
           <TextView
                 android:text="Prescription"
                 android:layout_width="match_parent"
-                android:background="@drawable/textmodify"
+                android:background="@drawable/color_border"
                 android:layout_height="25dp"
                 android:id="@+id/Text_presc" />
 
@@ -51,7 +51,7 @@
                 android:text="Diagnosis details"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:background="@drawable/textmodify"
+                android:background="@drawable/color_border"
                 android:id="@+id/text_diagnosis" />
 
             <Space
@@ -65,7 +65,7 @@
             <TextView
                 android:text="Date"
                 android:layout_width="match_parent"
-                android:background="@drawable/textmodify"
+                android:background="@drawable/color_border"
                 android:layout_height="25dp"
                 android:id="@+id/text_Date" />
         <Space
@@ -86,12 +86,15 @@
 
             <Button
                 android:id="@+id/next_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textAlignment="gravity"
+                android:gravity="center"
                 android:onClick="Onclick"
-                android:gravity="left"
                 android:text="Next"
                 android:contentDescription="Next_Button"
+                android:textColor="#FFFF"
+                android:background="@drawable/disable_button_color"
                 android:visibility="visible" />
 
             <View android:layout_height="wrap_content"
@@ -99,12 +102,16 @@
                 android:layout_weight="1"/>
             <Button
                 android:id="@+id/previous_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:text="previous"
                 android:onClick="Onclick"
                 android:contentDescription="Previous_button"
-                android:gravity="right"
+                android:textColor="#FFFF"
+
+                android:background="@drawable/disable_button_color"
+                android:textAlignment="gravity"
+                android:gravity="center"
                 android:visibility="visible" />
         </LinearLayout>
     </LinearLayout>
