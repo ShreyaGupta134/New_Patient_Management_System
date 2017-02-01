@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:text="ID"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+             />
+        <TextView android:text="@+id/TextView01"
+            android:id="@+id/Text_id"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/color_border"
+
+            />
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        <TextView
+            android:text="PRESCRIPTION"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+             />
+
+          <TextView
+                android:text="Prescription"
+                android:layout_width="match_parent"
+                android:background="@drawable/color_border"
+                android:layout_height="25dp"
+                android:id="@+id/Text_presc" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        <TextView
+            android:text="DIAGNOSIS"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+          />
+            <TextView
+                android:text="Diagnosis details"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/color_border"
+                android:id="@+id/text_diagnosis" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        <TextView
+            android:text="DATE"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+             />
+            <TextView
+                android:text="Date"
+                android:layout_width="match_parent"
+                android:background="@drawable/color_border"
+                android:layout_height="25dp"
+                android:id="@+id/text_Date" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:text="Notes"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:id="@+id/text_Notes" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:onClick="Onclick"
+                android:text="Next"
+                android:contentDescription="Next_Button"
+                android:textColor="#FFFF"
+                android:background="@drawable/color_disable"
+                android:visibility="visible" />
+
+            <View android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/previous_button"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="previous"
+                android:onClick="Onclick"
+                android:contentDescription="Previous_button"
+                android:textColor="#FFFF"
+                android:background="@drawable/color_disable"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>

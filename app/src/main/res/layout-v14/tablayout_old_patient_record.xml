@@ -94,7 +94,7 @@
                 android:text="Next"
                 android:contentDescription="Next_Button"
                 android:textColor="#FFFF"
-                android:background="@drawable/disable_button_color"
+                android:background="@color/colorPrimaryDark"
                 android:visibility="visible" />
 
             <View android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
                 android:contentDescription="Previous_button"
                 android:textColor="#FFFF"
 
-                android:background="@drawable/disable_button_color"
+                android:background="@color/colorPrimaryDark"
                 android:textAlignment="gravity"
                 android:gravity="center"
                 android:visibility="visible" />

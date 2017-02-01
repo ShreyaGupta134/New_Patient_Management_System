@@ -2,6 +2,8 @@ package com.example.elait.pms;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -32,7 +34,7 @@ public class Tab_Layout_Old_Patient_Record extends Fragment implements View.OnCl
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View view = inflater.inflate(R.layout.patientrecord_activity_data_list_view1, container, false);
+        View view = inflater.inflate(R.layout.tablayout_old_patient_record, container, false);
         Button one = (Button) view.findViewById(R.id.next_button);
         one.setOnClickListener(this); // calling onClick() method
         Button two = (Button)view.findViewById(R.id.previous_button);
@@ -103,6 +105,7 @@ public class Tab_Layout_Old_Patient_Record extends Fragment implements View.OnCl
             else{
                 Button btn = (Button) getActivity().findViewById(R.id.previous_button);
                 btn.setEnabled(false);
+                btn.getBackground().setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
 
             }
         }
@@ -131,6 +134,7 @@ public class Tab_Layout_Old_Patient_Record extends Fragment implements View.OnCl
             else{
                 Button btn = (Button) getActivity().findViewById(R.id.next_button);
                 btn.setEnabled(false);
+                btn.getBackground().setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
 
             }
         }}
